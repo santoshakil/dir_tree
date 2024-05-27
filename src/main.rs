@@ -26,10 +26,12 @@ fn visit_dirs(
                 || name.starts_with("macos")
                 || name.starts_with("linux")
                 || name.starts_with("windows")
+                || name.starts_with("web")
                 || name.ends_with(".lock")
             {
                 continue;
-            } else if let Some(exclude_path) = exclude {
+            }
+            if let Some(exclude_path) = exclude {
                 if path.starts_with(exclude_path) {
                     continue;
                 }
