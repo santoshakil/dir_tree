@@ -28,6 +28,8 @@ fn visit_dirs(
                 || name.starts_with("windows")
                 || name.starts_with("web")
                 || name.ends_with(".lock")
+                || name.ends_with(".log")
+                || name.to_string() == "dir_tree".to_string()
             {
                 continue;
             }
